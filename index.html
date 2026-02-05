@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Free Money Claim</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali&display=swap" rel="stylesheet">
+
+<style>
+body{font-family:'Noto Sans Bengali',sans-serif;background:#e9eff5;margin:0;}
+.header{background:#0b1d33;color:white;padding:12px;text-align:center;font-size:20px;font-weight:bold;display:flex;align-items:center;justify-content:center;gap:10px;}
+.header img{width:40px;height:40px;border-radius:50%;}
+.container{padding:12px;}
+.card{background:white;padding:15px;border-radius:12px;box-shadow:0 0 12px rgba(0,0,0,0.1);margin-bottom:12px;}
+button{padding:12px;width:100%;border:none;border-radius:6px;font-size:16px;margin-top:8px;cursor:pointer;transition: all 0.3s ease;}
+button:hover{opacity:0.85;transform:translateY(-2px);}
+.btn-green{background:#28a745;color:white;}
+.btn-teal{background:#25d366;color:white;}
+.btn-purple{background:#8a3ab9;color:white;}
+.btn-blue{background:#1877f2;color:white;}
+.btn-like{background:#e0245e;color:white; display:flex; justify-content:center; align-items:center; gap:5px; font-weight:bold;animation: pulse 2s infinite;}
+.btn-video{background:#ff5722;color:white;font-weight:bold;}
+@keyframes pulse{0%{transform:scale(1);}50%{transform:scale(1.1);}100%{transform:scale(1);}}
+input{padding:12px;width:100%;border-radius:6px;border:1px solid #ccc;margin-top:10px;}
+.live-like{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px;}
+.like-count{font-weight:bold;color:#65676b;font-size:16px;}
+.comments{background:white;padding:12px;border-radius:12px;box-shadow:0 0 8px rgba(0,0,0,0.1);margin-top:10px;}
+.comment{display:flex;gap:10px;margin-bottom:10px;}
+.avatar{width:40px;height:40px;border-radius:50%;background-size:cover;background-position:center;}
+.comment-box{background:#f0f2f5;padding:8px 10px;border-radius:12px;font-size:14px;}
+.name{font-weight:bold;font-size:14px;}
+.time{font-size:12px;color:#777;}
+.popup{position:fixed;bottom:20px;left:10px;right:10px;background:#fff;padding:10px;border-radius:8px;box-shadow:0 0 10px rgba(0,0,0,0.2);display:none;font-size:14px;animation: fadein 0.5s;}
+@keyframes fadein{0%{opacity:0; transform:translateY(10px);}100%{opacity:1; transform:translateY(0);}}
+#shareStep button{margin-top:5px;}
+#shareStep button:hover{transform:scale(1.05);}
+</style>
+</head>
+<body>
+
+<div class="header">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWV9845l3SEB74KEpUfwLeftE79xX6GhDyXgv_3vNUW3f1hcshTb7Xa42-sTl4y2uLOEmxUBHw7rYEkfjWXF60HYAxtjhW0Pt6AaBtJGZkMlYO28n7iZqGLwFWpVe-wFO8jCcG-Zb8lOsc4p8WncRH43itnm8Hdf2bs6i3BRidHpU-Fq1LaitVk5Rd1f4/s640/7479.jpg" alt="Logo">
+ফ্রি ২০০০ টাকা আয় করুন
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<div class="live-like">
+<div>👀 Live Visitors: <span id="visitors">0</span></div>
+<div class="like-section">
+<button class="btn-like" id="likeBtn">👍 Like</button>
+<span class="like-count" id="likeCount">173k</span>
+</div>
+</div>
+
+<h3><b>বিকাশ নাম্বার দিন এবং ফ্রি টাকা claim korun</b></h3>
+<input id="bkash" placeholder="Bkash Mobile Number">
+<button class="btn-green" id="claimBtn">🎉 Claim Now</button>
+
+<div id="shareStep" style="margin-top:15px;display:none;">
+<p>রিওয়ার্ড পেতে ১০ জনকে share করে Claim button চাপ দিন</p>
+<button class="btn-teal" onclick="share('telegram')">📨 Telegram</button>
+<button class="btn-purple" onclick="share('whatsapp')">💬 WhatsApp</button>
+<button class="btn-blue" onclick="share('messenger')">💌 Messenger</button>
+</div>
+
+</div>
+
+<!-- COMMENT SECTION -->
+<div class="comments">
+<h4>💬 User Comments</h4>
+<div class="comment">
+<div class="avatar" style="background-image:url('https://randomuser.me/api/portraits/men/81.jpg')"></div>
+<div><div class="comment-box"><div class="name">Rahim</div>ভাই সত্যি কাজ করছে 🔥</div><div class="time">2 minutes ago</div></div>
+</div>
+<div class="comment">
+<div class="avatar" style="background-image:url('https://randomuser.me/api/portraits/women/44.jpg')"></div>
+<div><div class="comment-box"><div class="name">Nabila</div>আমি শেয়ার করে claim করেছি 😊</div><div class="time">5 minutes ago</div></div>
+</div>
+<div class="comment">
+<div class="avatar" style="background-image:url('https://randomuser.me/api/portraits/men/22.jpg')"></div>
+<div><div class="comment-box"><div class="name">Sohag</div>ভালো অফার 👍</div><div class="time">10 minutes ago</div></div>
+</div>
+<div class="comment">
+<div class="avatar" style="background-image:url('https://randomuser.me/api/portraits/women/55.jpg')"></div>
+<div><div class="comment-box"><div class="name">Sadia</div>আমি নতুনভাবে শেয়ার করেছি এবং পেতে যাচ্ছি 🎉</div><div class="time">3 minutes ago</div></div>
+</div>
+</div>
+
+<!-- Video button below comments -->
+<div style="margin:12px 0;">
+<button class="btn-video" onclick="openVideo()">কিভাবে নিবেন ভিডিও দেখুন</button>
+</div>
+
+<!-- Popup -->
+<div class="popup" id="popup"></div>
+
+<script>
+// Visitors counter
+let v=230;
+setInterval(()=>{v+=Math.floor(Math.random()*4);document.getElementById("visitors").innerHTML=v;},2000);
+
+// Like button
+const likeBtn=document.getElementById('likeBtn');
+const likeCount=document.getElementById('likeCount');
+let likeNumber=173000;
+likeBtn.addEventListener('click',()=>{likeNumber++;likeCount.textContent=likeNumber>1000 ? (likeNumber/1000).toFixed(1)+'k' : likeNumber;likeBtn.disabled=true;likeBtn.style.opacity=0.6;});
+
+// Claim button
+const claimBtn=document.getElementById('claimBtn');
+let shareCount=0;
+claimBtn.addEventListener('click',()=>{
+let n=document.getElementById("bkash").value;
+if(n.length<10){alert("Valid Bkash number দিন"); return;}
+alert("Number submitted!");
+// Hide input & claim
+document.getElementById("bkash").style.display="none";
+claimBtn.style.display="none";
+document.getElementById('shareStep').style.display='block';
+});
+
+// Share function
+function share(platform){
+shareCount++;
+let url = encodeURIComponent(window.location.href);
+if(platform==='telegram'){window.open('https://t.me/share/url?url='+url+'&text=Check%20this%20reward');}
+else if(platform==='whatsapp'){window.open('https://api.whatsapp.com/send?text=Check%20this%20reward%20'+url);}
+else if(platform==='messenger'){window.open('https://www.facebook.com/dialog/send?link='+url+'&app_id=1234567890&redirect_uri='+url);}
+checkShareComplete();
+}
+
+// Redirect after 10 shares
+function checkShareComplete(){if(shareCount>=10){window.location.href="https://www.effectivegatecpm.com/vyxvjw83?key=895b26c0a9ef6f7b34ecb10d91171757";}}
+
+// Video button
+function openVideo(){window.location.href="https://www.effectivegatecpm.com/vyxvjw83?key=895b26c0a9ef6f7b34ecb10d91171757";}
+
+// Popup
+let names=["Rahim","Hasan","Jannat","Sadia","Rafi"];
+setInterval(()=>{let name=names[Math.floor(Math.random()*names.length)];let pop=document.getElementById("popup");pop.innerHTML="🎉 "+name+" just claimed reward!";pop.style.display="block";setTimeout(()=>pop.style.display="none",3000);},7000);
+
+</script>
+
+</body>
+</html>
